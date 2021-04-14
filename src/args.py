@@ -1,9 +1,9 @@
-import argparse
+from argparse import ArgumentParser
 
 
-def cli_args():
+def cli_args() -> ArgumentParser:
     description = "Program to parse a QUAKE log file"
-    args = argparse.ArgumentParser(description=description)
+    args = ArgumentParser(description=description)
 
     args.add_argument(
         "--file", "-f", help="Log filename", type=str, required=True,
